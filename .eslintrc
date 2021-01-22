@@ -3,7 +3,14 @@
     "browser": true,
     "es2021": true
   },
-  "extends": ["plugin:react/recommended", "airbnb"],
+  "extends": [
+    "eslint:recommended", 
+    "plugin:@typescript-eslint/recommended", 
+    "plugin:react/recommended", 
+    "plugin:react-hooks/recommended",
+    "plugin:react/recommended", 
+    "airbnb"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -16,6 +23,7 @@
   "ignorePatterns": ["dist/*", "node_modules/*"],
   "rules": {
     "linebreak-style": [2, "windows"],
+    "react/prop-types": "off",
     "no-use-before-define": "off",
     "@typescript-eslint/no-use-before-define": ["error"]
   }
