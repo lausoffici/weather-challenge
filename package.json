@@ -1,0 +1,33 @@
+{
+  "name": "weather-challenge",
+  "version": "1.0.0",
+  "description": "Developer Applicant Interview Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --hot --open",
+    "build": "webpack --config webpack.config.js --mode production"
+  },
+  "keywords": [
+    "frontend",
+    "front-end"
+  ],
+  "author": "Lautaro Soffici",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^4.5.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.17.0",
+    "webpack-cli": "^4.4.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
