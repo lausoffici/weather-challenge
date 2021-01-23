@@ -6,7 +6,8 @@
   "scripts": {
     "start": "webpack serve --hot --open --mode development",
     "build": "webpack --config webpack.config.js --mode production",
-    "lint": "eslint . --fix"
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "keywords": [
     "frontend",
