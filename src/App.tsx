@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
+import Header from './components/Header/Header';
 
-const App = () => (
-  <div>
-    <h1>Hello React</h1>
-  </div>
+const App: FC = () => (
+  <Header />
 );
 
 export default App;

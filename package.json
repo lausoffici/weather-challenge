@@ -2,7 +2,7 @@
   "name": "weather-challenge",
   "version": "1.0.0",
   "description": "Developer Applicant Interview Test",
-  "main": "index.jsx",
+  "main": "index.tsx",
   "scripts": {
     "start": "webpack serve --hot --open --mode development",
     "build": "webpack --config webpack.config.js --mode production",
@@ -16,12 +16,16 @@
   "license": "MIT",
   "dependencies": {
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
     "@babel/preset-react": "^7.12.10",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/styled-components": "^5.1.7",
     "@typescript-eslint/eslint-plugin": "^4.14.0",
     "@typescript-eslint/parser": "^4.14.0",
     "babel-loader": "^8.2.2",
