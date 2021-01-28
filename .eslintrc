@@ -30,10 +30,12 @@
   "ignorePatterns": ["dist/*", "node_modules/*"],
   "rules": {
     "@typescript-eslint/no-var-requires": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
     "react/prop-types": "off",
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "no-use-before-define": "off",
     "import/extensions": "off",
-    "init-declarations": ["error", "never"]
+    "init-declarations": ["error", "never"],
+    "no-console": "off"
   }
 }
