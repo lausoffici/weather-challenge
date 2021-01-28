@@ -7,7 +7,8 @@ export type CurrentWeatherProps = {
 };
 
 const CurrentWeather: React.FC<CurrentWeatherProps> = ({ locationData }) => {
-  const { data, get } = useFetch(`http://api.openweathermap.org/data/2.5/weather?appid=699c25a797f6faeb1f3bf545c2fecdbf&units=metric&lat=${locationData?.lat}&lon=${locationData?.lon}`, false);
+  const url = `${process.env.WEATHER_API_URL}&lat=${locationData?.lat}&lon=${locationData?.lon}`;
+  const { data, get } = useFetch(url, false);
 
   useEffect(() => {
     if (locationData) {
