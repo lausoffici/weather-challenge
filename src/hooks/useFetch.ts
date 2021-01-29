@@ -6,7 +6,7 @@ type UseFetchResponse<T> = {
   get: GetRequest
 };
 
-type GetRequest = () => Promise<void>;
+type GetRequest = (endpoint?: string) => Promise<void>;
 
 export type Status = 'idle' | 'resolved' | 'error' | 'pending';
 
@@ -14,12 +14,11 @@ export const useFetch = <T>(url: string, initialFetch = true): UseFetchResponse<
   const [status, setStatus] = useState<Status>('idle');
   const [data, setData] = useState<T | undefined>(undefined);
 
-  const fetchData = useCallback(async () => {
+  const fetchData = useCallback(async (endpoint?: string) => {
     setStatus('pending');
-    console.log(`fetching: ${url}`);
     try {
       // fetch url
-      const response = await fetch(url);
+      const response = await fetch(url + (endpoint || ''));
       if (!response.ok) {
         throw new Error('Failed to fetch');
       }
@@ -40,7 +39,10 @@ export const useFetch = <T>(url: string, initialFetch = true): UseFetchResponse<
     fetchData();
   }, [initialFetch, url, fetchData]);
 
-  const get: GetRequest = useCallback(() => fetchData(), [fetchData]);
+  const get: GetRequest = useCallback(
+    (endpoint?: string) => fetchData(endpoint),
+    [fetchData],
+  );
 
   return { status, data, get };
 };

@@ -7,9 +7,7 @@
     "eslint:recommended", 
     "plugin:@typescript-eslint/recommended", 
     "plugin:react/recommended", 
-    "plugin:react-hooks/recommended",
-    "plugin:react/recommended", 
-    "airbnb"
+    "plugin:react-hooks/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -27,11 +25,10 @@
     }
   },
   "plugins": ["react", "@typescript-eslint"],
-  "ignorePatterns": ["dist/*", "node_modules/*", "webpack.config.js"],
+  "ignorePatterns": ["dist/*", "node_modules/*", "webpack.config.js", "src/types/*"],
   "rules": {
     "@typescript-eslint/no-var-requires": "off",
     "@typescript-eslint/no-use-before-define": ["error"],
-    "@typescript-eslint/no-non-null-assertion": "off",
     "react/prop-types": "off",
     "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
     "no-use-before-define": "off",
