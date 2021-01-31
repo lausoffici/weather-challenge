@@ -8,18 +8,13 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: var(--background);
+    background: #d3ffe6;
     font-family: 'Lato', sans-serif;
   }
 
   a {
     text-decoration: none;
     color: inherit;
-  }
-
-  body {
-    min-height: 100vh;
-    background: var(--background)
   }
 
   h1 {

@@ -5,6 +5,7 @@ import CityPicker from '../CityPicker/CityPicker';
 import CurrentWeather from '../Weather/CurrentWeather';
 import Forecast from '../Forecast/Forecast';
 import LocationContainer from './LocationContainer';
+import Card from '../Card/Card';
 
 const Location: React.FC = () => {
   const [cityName, setCityName] = useState<string>('');
@@ -40,11 +41,17 @@ const Location: React.FC = () => {
 
   return (
     <LocationContainer>
-      <div className="row">
-        <CurrentWeather weatherData={currentWeatherData} />
-        <CityPicker handleCitySubmit={handleCitySubmit} cityName={cityName} setCityName={setCityName} />
+      <div className="flex-column">
+        <div className="row">
+          <Card>
+            <CurrentWeather weatherData={currentWeatherData} />
+          </Card>
+          <Card>
+            <CityPicker handleCitySubmit={handleCitySubmit} cityName={cityName} setCityName={setCityName} />
+          </Card>
+        </div>
+        <Forecast forecastData={forecastData} />
       </div>
-      <Forecast forecastData={forecastData} />
     </LocationContainer>
   );
 };

@@ -3,9 +3,14 @@ import styled from 'styled-components';
 const CurrentWeatherContainer = styled.div`
   flex: 1;
   min-width: 320px;
-  padding: 0 15px;
-  border: 1px solid black;
+  margin-right: 20px;
+  padding: 0 15px 20px 15px;
   font-weight: 600;
+
+  @media (max-width: 715px) {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 
   .secondary-info, .description, .feels-like {
     opacity: 0.7;

@@ -4,7 +4,6 @@ const CityPickerContainer = styled.div`
   flex: 2;
   min-width: 320px;
   padding: 0 15px;
-  border: 1px solid black;
 
   label {
     font-weight: 600;
@@ -16,6 +15,7 @@ const CityPickerContainer = styled.div`
     margin-top: 5px;
     width: 100%;
     margin-bottom: 15px;
+    font-size: 1rem;
   }
 
   button {
