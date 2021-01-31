@@ -1,5 +1,5 @@
 import React from 'react';
-import Location from './components/Location/Location';
+import Location from './containers/Location/Location';
 
 const App: React.FC = () => (
   <Location />
