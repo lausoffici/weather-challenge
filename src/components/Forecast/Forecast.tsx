@@ -2,11 +2,10 @@ import React from 'react';
 import { ForecastResponse } from '../../types/index';
 
 export type ForecastProps = {
-  data?: ForecastResponse
+  forecastData?: ForecastResponse
 };
 
-const Forecast: React.FC<ForecastProps> = ({ data }) => {
-  console.log(data);
+const Forecast: React.FC<ForecastProps> = ({ forecastData }) => {
   return (
     <div />
   );

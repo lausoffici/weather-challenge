@@ -1,4 +1,5 @@
 import React, { Dispatch, FC, FormEvent, SetStateAction } from 'react';
+import CityPickerContainer from './CityPickerContainer';
 
 type CityPickerProps = {
   handleCitySubmit: (event: FormEvent) => void;
@@ -7,13 +8,16 @@ type CityPickerProps = {
 };
 
 const CityPicker: FC<CityPickerProps> = ({ handleCitySubmit, cityName, setCityName }) => (
-  <form onSubmit={handleCitySubmit}>
-    <label>
-      City name:
-      <input type="text" name="cityName" value={cityName} onChange={(e) => setCityName(e.target.value)} />
-    </label>
-    <input type="submit" value="Search" />
-  </form>
+  <CityPickerContainer>
+    <form onSubmit={handleCitySubmit}>
+      <h1>Weather in your city</h1>
+      <label>
+        City
+      </label>
+      <input type="text" placeholder="Enter a city e.g: London" name="cityName" value={cityName} onChange={(e) => setCityName(e.target.value)} />
+      <button>Search</button>
+    </form>
+  </CityPickerContainer>
 );
 
 export default CityPicker;
