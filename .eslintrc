@@ -7,7 +7,9 @@
     "eslint:recommended", 
     "plugin:@typescript-eslint/recommended", 
     "plugin:react/recommended", 
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:jest-dom/recommended",
+    "plugin:testing-library/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -22,18 +24,20 @@
       "node": {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
+    },
+    "react": {
+      "version": "latest"
     }
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": [
+    "react", 
+    "@typescript-eslint", 
+    "jest-dom", 
+    "testing-library"
+  ],
   "ignorePatterns": ["dist/*", "node_modules/*", "webpack.config.js", "src/types/*"],
   "rules": {
     "@typescript-eslint/no-var-requires": "off",
-    "@typescript-eslint/no-use-before-define": ["error"],
-    "react/prop-types": "off",
-    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-    "no-use-before-define": "off",
-    "import/extensions": "off",
-    "init-declarations": ["error", "never"],
-    "no-console": "off"
+    "react/prop-types": "off"
   }
 }
