@@ -7,7 +7,7 @@ const ForecastItemContainer = styled.div`
   font-weight: 600;
 
   &:not(:last-child) {
-    border-right: 2px solid #7af3ad;
+    border-right: 2px solid #fff;
   }
 
   h1, h2 {
@@ -19,7 +19,7 @@ const ForecastItemContainer = styled.div`
     align-items: center;
     width: 100%;
     padding: 15px 0;
-    border-top: 2px solid #7af3ad;
+    border-top: 2px solid #fff;
 
     &:not(:last-child) {
       border-right: none;
@@ -29,7 +29,7 @@ const ForecastItemContainer = styled.div`
   .temp {
     font-size: 2.5rem;
     font-weight: 800;
-    padding: 15px 0;
+    padding-top: 20px;
 
     .degrees {
       font-size: 1.25rem;

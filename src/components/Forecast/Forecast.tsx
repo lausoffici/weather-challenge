@@ -1,7 +1,6 @@
 import React from 'react';
 import { ForecastResponse } from '../../types/index';
 import { getDailyForecast } from '../../utils/weather.utils';
-import Card from '../Card/Card';
 import ForecastContainer from './ForecastContainer';
 import ForecastItem from './ForecastItem';
 
@@ -11,7 +10,7 @@ export type ForecastProps = {
 
 const Forecast: React.FC<ForecastProps> = ({ forecastData }) => {
   return (
-    <Card className="flex-grow-1">
+    <div className="card flex-grow-1">
       <ForecastContainer>
         <h2>Daily Forecast 5 days</h2>
         <div className="content">
@@ -20,7 +19,7 @@ const Forecast: React.FC<ForecastProps> = ({ forecastData }) => {
           ))}
         </div>
       </ForecastContainer>
-    </Card>
+    </div>
   );
 };
 

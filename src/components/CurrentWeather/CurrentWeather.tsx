@@ -1,7 +1,6 @@
 import React from 'react';
 import { WeatherResponse } from '../../types/index';
 import { formatTemperature as format } from '../../utils/weather.utils';
-import Card from '../Card/Card';
 import CurrentWeatherContainer from './CurrentWeatherCointainer';
 
 export type CurrentWeatherProps = {
@@ -10,7 +9,7 @@ export type CurrentWeatherProps = {
 
 const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weatherData }) => {
   return (
-    <Card>
+    <div className="card">
       <CurrentWeatherContainer>
         <h1>Current weather</h1>
         <div className="content">
@@ -30,7 +29,7 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weatherData }) => {
           </div>
         </div>
       </CurrentWeatherContainer>
-    </Card>
+    </div>
   );
 };
 

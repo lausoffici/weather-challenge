@@ -6,11 +6,6 @@ const CurrentWeatherContainer = styled.div`
   padding: 0 15px 20px 15px;
   font-weight: 600;
 
-  @media (max-width: 800px) {
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
-
   .secondary-info, .description, .feels-like {
     opacity: 0.7;
   }
@@ -33,11 +28,6 @@ const CurrentWeatherContainer = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-  }
-
-  img {
-    width: 100px;
-    height: auto;
   }
 `;
 
