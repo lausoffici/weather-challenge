@@ -13,11 +13,11 @@ export interface LocationResponse {
   as: string,
   query: string
 }
-
 export interface WeatherResponse {
   weather: [{
     main: string,
-    description: string
+    description: string,
+    icon: string
   }],
   main: {
     temp: number,
@@ -36,17 +36,6 @@ export interface WeatherResponse {
   },
   dt: number
 }
-
-export enum DaysOfWeek {
-  Sunday = 0,
-  Monday = 1,
-  Tuesday = 2,
-  Wednesday = 3,
-  Thursday = 4,
-  Friday = 5,
-  Saturday = 6
-}
-
 export interface ForecastResponse {
   list: WeatherResponse[]
 }

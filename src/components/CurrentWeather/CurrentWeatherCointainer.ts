@@ -34,6 +34,11 @@ const CurrentWeatherContainer = styled.div`
     flex-direction: column;
     justify-content: flex-end;
   }
+
+  img {
+    width: 100px;
+    height: auto;
+  }
 `;
 
 export default CurrentWeatherContainer;

@@ -2,7 +2,7 @@ import React, { FormEvent, useEffect, useState } from 'react';
 import { useFetch } from '../../hooks/useFetch';
 import { ForecastResponse, LocationResponse, WeatherResponse } from '../../types/index';
 import CityPicker from '../CityPicker/CityPicker';
-import CurrentWeather from '../Weather/CurrentWeather';
+import CurrentWeather from '../CurrentWeather/CurrentWeather';
 import Forecast from '../Forecast/Forecast';
 import LocationContainer from './LocationContainer';
 
