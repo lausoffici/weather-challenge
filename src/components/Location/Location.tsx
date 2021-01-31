@@ -43,10 +43,10 @@ const Location: React.FC = () => {
       <div className="flex-column">
         <div className="row">
           <CityPicker handleCitySubmit={handleCitySubmit} cityName={cityName} setCityName={setCityName} />
-          <CurrentWeather weatherData={currentWeatherData} />
+          {currentWeatherData && <CurrentWeather weatherData={currentWeatherData} />}
         </div>
         <div className="row">
-          <Forecast forecastData={forecastData} />
+          {forecastData && <Forecast forecastData={forecastData} />}
         </div>
       </div>
     </LocationContainer>
