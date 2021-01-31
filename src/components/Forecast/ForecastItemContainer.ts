@@ -6,22 +6,41 @@ const ForecastItemContainer = styled.div`
   text-align: center;
   font-weight: 600;
 
-  h1 {
-    margin-top: 0;
+  &:not(:last-child) {
+    border-right: 2px solid #7af3ad;
   }
 
-  &:not(:last-child) {
-    border-right: 1px solid #7af3ad;
+  h1, h2 {
+    margin: 0;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 15px 0;
+    border-top: 2px solid #7af3ad;
+
+    &:not(:last-child) {
+      border-right: none;
+    }
   }
 
   .temp {
-    font-size: 1.7rem;
+    font-size: 2.5rem;
     font-weight: 800;
+    padding: 15px 0;
+
+    .degrees {
+      font-size: 1.25rem;
+      vertical-align: super;
+      margin-left: 5px;
+    }
   }
 
   .description {
-    font-size: 1.2rem;
-    padding: 15px 0;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
   }
 
   .info {

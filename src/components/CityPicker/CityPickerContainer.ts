@@ -11,11 +11,11 @@ const CityPickerContainer = styled.div`
 
   input {
     display: block;
-    padding: 5px;
-    margin-top: 5px;
+    padding: 10px;
+    margin-top: 10px;
     width: 100%;
-    margin-bottom: 15px;
-    font-size: 1rem;
+    margin-bottom: 30px;
+    font-size: 1.1rem;
   }
 
   button {

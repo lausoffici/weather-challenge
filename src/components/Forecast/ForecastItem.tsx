@@ -11,9 +11,11 @@ const ForecastItem: React.FC<ForecastItemProps> = ({ weatherData }) => {
   return (
     <ForecastItemContainer>
       <h1>{getDayOfWeek(weatherData.dt)}</h1>
-      <div className="temp">{format(weatherData.main.temp)}°C</div>
-      <div className="description">{weatherData.weather[0].main}</div>
+      <div className="temp">
+        {format(weatherData?.main.temp)}<span className="degrees">°C</span>
+      </div>
       <div className="info">
+        <div className="description">{weatherData.weather[0].main}</div>
         <div>Feels like {format(weatherData.main.feels_like)}°C</div>
         <div>Humidity: {weatherData?.main.humidity}%</div>
         <div>Wind: {weatherData?.wind.speed} m/s</div>

@@ -11,7 +11,7 @@ type CityPickerProps = {
 const CityPicker: FC<CityPickerProps> = ({ handleCitySubmit, cityName, setCityName }) => (
   <Card className="flex-grow-1">
     <CityPickerContainer>
-      <form onSubmit={handleCitySubmit}>
+      <form onSubmit={handleCitySubmit} autoComplete="off">
         <h1>Weather in your city</h1>
         <label>
           City

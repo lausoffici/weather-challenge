@@ -11,16 +11,16 @@ export type ForecastProps = {
 
 const Forecast: React.FC<ForecastProps> = ({ forecastData }) => {
   return (
-    <ForecastContainer>
-      <Card>
+    <Card className="flex-grow-1">
+      <ForecastContainer>
         <h2>Daily Forecast 5 days</h2>
         <div className="content">
           {forecastData && getDailyForecast(forecastData).list.map((item, index) => (
             <ForecastItem key={index} weatherData={item} />
           ))}
         </div>
-      </Card>
-    </ForecastContainer>
+      </ForecastContainer>
+    </Card>
   );
 };
 

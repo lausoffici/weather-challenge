@@ -42,10 +42,12 @@ const Location: React.FC = () => {
     <LocationContainer>
       <div className="flex-column">
         <div className="row">
-          <CurrentWeather weatherData={currentWeatherData} />
           <CityPicker handleCitySubmit={handleCitySubmit} cityName={cityName} setCityName={setCityName} />
+          <CurrentWeather weatherData={currentWeatherData} />
         </div>
-        <Forecast forecastData={forecastData} />
+        <div className="row">
+          <Forecast forecastData={forecastData} />
+        </div>
       </div>
     </LocationContainer>
   );

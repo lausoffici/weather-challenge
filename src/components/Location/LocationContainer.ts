@@ -5,14 +5,14 @@ const LocationContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 
   .row {
     display: flex;
     justify-content: space-between;
     width: 800px;
 
-    @media (max-width: 715px) {
+    @media (max-width: 800px) {
       flex-direction: column;
       align-items: center;
     }
