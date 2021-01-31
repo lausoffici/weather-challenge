@@ -6,6 +6,14 @@ const ForecastItemContainer = styled.div`
   text-align: center;
   font-weight: 600;
 
+  h1 {
+    margin-top: 0;
+  }
+
+  &:not(:last-child) {
+    border-right: 1px solid #7af3ad;
+  }
+
   .temp {
     font-size: 1.7rem;
     font-weight: 800;
