@@ -12,15 +12,15 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Lato', sans-serif;
   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-
   h1 {
     text-align: center;
     font-size: 1.5rem;
+    margin-top: 0;
     margin-bottom: 25px;
+  }
+
+  form {
+    margin: 0;
   }
 
   .flex-row {
@@ -37,7 +37,7 @@ const GlobalStyle = createGlobalStyle`
     flex-grow: 1;
   }
 
-  img {
+  img.weather-icon {
     width: 100px;
     height: auto;
   }

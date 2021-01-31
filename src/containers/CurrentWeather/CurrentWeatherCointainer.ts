@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const CurrentWeatherContainer = styled.div`
   flex: 1;
   min-width: 320px;
-  padding: 0 15px 20px 15px;
+  padding: 20px;
   font-weight: 600;
 
   .secondary-info, .description, .feels-like {

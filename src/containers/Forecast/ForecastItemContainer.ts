@@ -2,22 +2,18 @@ import styled from "styled-components";
 
 const ForecastItemContainer = styled.div`
   flex: 1;
-  max-width: 800px;
-  text-align: center;
   font-weight: 600;
 
   &:not(:last-child) {
     border-right: 2px solid #fff;
   }
 
-  h1, h2 {
+  h2 {
     margin: 0;
   }
 
   @media (max-width: 800px) {
     flex-direction: column;
-    align-items: center;
-    width: 100%;
     padding: 15px 0;
     border-top: 2px solid #fff;
 

@@ -14,8 +14,8 @@ const CityPicker: FC<CityPickerProps> = ({ handleCitySubmit, cityName, setCityNa
         <h1>Weather in your city</h1>
         <label>
           City
+          <input type="text" placeholder="Enter a city e.g: London" name="cityName" value={cityName} onChange={(e) => setCityName(e.target.value)} />
         </label>
-        <input type="text" placeholder="Enter a city e.g: London" name="cityName" value={cityName} onChange={(e) => setCityName(e.target.value)} />
         <button>Search</button>
       </form>
     </CityPickerContainer>

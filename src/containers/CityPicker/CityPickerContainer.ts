@@ -3,7 +3,7 @@ import styled from 'styled-components';
 const CityPickerContainer = styled.div`
   flex: 2;
   min-width: 320px;
-  padding: 0 15px;
+  padding: 20px;
 
   label {
     font-weight: 600;
@@ -14,7 +14,7 @@ const CityPickerContainer = styled.div`
     padding: 10px;
     margin-top: 10px;
     width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
     font-size: 1.1rem;
     border: 2px solid transparent;
     border-radius: 7px;

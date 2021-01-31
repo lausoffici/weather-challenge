@@ -22,7 +22,7 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weatherData }) => {
             <div className="feels-like">Feels like {format(weatherData?.main.feels_like)}°C</div>
           </div>
           <div className="secondary-info">
-            <img src={`http://openweathermap.org/img/wn/${weatherData?.weather[0].icon}@2x.png`} />
+            <img className="weather-icon" src={`http://openweathermap.org/img/wn/${weatherData?.weather[0].icon}@2x.png`} />
             <div>Humidity: {weatherData?.main.humidity}%</div>
             <div>Wind: {weatherData?.wind.speed} m/s</div>
             <div>Pressure: {weatherData?.main.pressure} hPa</div>

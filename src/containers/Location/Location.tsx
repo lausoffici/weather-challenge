@@ -27,6 +27,7 @@ const Location: React.FC = () => {
     event.preventDefault();
     if (!locationData && !cityName) return;
 
+    // if city is provided tries to fetch city's weather data, if not fetch client's location weather data
     if (cityName) {
       const queryParams = `&q=${cityName}`;
       getCurrentWeatherData(queryParams);
@@ -40,14 +41,10 @@ const Location: React.FC = () => {
 
   return (
     <LocationContainer>
-      <div className="flex-column">
-        <div className="row">
-          <CityPicker handleCitySubmit={handleCitySubmit} cityName={cityName} setCityName={setCityName} />
-          {currentWeatherData && <CurrentWeather weatherData={currentWeatherData} />}
-        </div>
-        <div className="row">
-          {forecastData && <Forecast forecastData={forecastData} />}
-        </div>
+      <div className="row">
+        <CityPicker handleCitySubmit={handleCitySubmit} cityName={cityName} setCityName={setCityName} />
+        {currentWeatherData && <CurrentWeather weatherData={currentWeatherData} />}
+        {forecastData && <Forecast forecastData={forecastData} />}
       </div>
     </LocationContainer>
   );

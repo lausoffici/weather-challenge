@@ -12,7 +12,7 @@ const Forecast: React.FC<ForecastProps> = ({ forecastData }) => {
   return (
     <div className="card flex-grow-1">
       <ForecastContainer>
-        <h2>Daily Forecast 5 days</h2>
+        <h1>Daily Forecast 5 days</h1>
         <div className="content">
           {forecastData && getDailyForecast(forecastData).list.map((item, index) => (
             <ForecastItem key={index} weatherData={item} />
