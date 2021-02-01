@@ -14,11 +14,11 @@ module.exports = () => {
         template: "./public/index.html",
       }),
       new webpack.EnvironmentPlugin({
-        LOCATION_API_URL: "http://ip-api.com/json",
+        LOCATION_API_URL: "https://ip-api.com/json",
         WEATHER_API_URL:
-          "http://api.openweathermap.org/data/2.5/weather?appid=699c25a797f6faeb1f3bf545c2fecdbf&units=metric",
+          "https://api.openweathermap.org/data/2.5/weather?appid=699c25a797f6faeb1f3bf545c2fecdbf&units=metric",
         FORECAST_API_URL:
-          "http://api.openweathermap.org/data/2.5/forecast?units=metric&appid=699c25a797f6faeb1f3bf545c2fecdbf",
+          "https://api.openweathermap.org/data/2.5/forecast?units=metric&appid=699c25a797f6faeb1f3bf545c2fecdbf",
       }),
     ],
     resolve: {
