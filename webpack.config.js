@@ -14,7 +14,6 @@ module.exports = () => {
       new HtmlWebpackPlugin({
         template: "./public/index.html",
       }),
-      new webpack.DefinePlugin(envKeys),
     ],
     resolve: {
       modules: [__dirname, "src", "node_modules"],
