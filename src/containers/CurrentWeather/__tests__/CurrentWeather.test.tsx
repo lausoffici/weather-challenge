@@ -1,6 +1,7 @@
 import React from "react";
 import { screen, render } from "@testing-library/react";
 import CurrentWeather, { CurrentWeatherProps } from "../CurrentWeather";
+import "@testing-library/jest-dom";
 
 const defProps: CurrentWeatherProps = {
   weatherData: undefined,

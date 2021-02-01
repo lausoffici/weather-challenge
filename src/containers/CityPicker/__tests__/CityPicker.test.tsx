@@ -1,6 +1,7 @@
 import React from "react";
 import { screen, render } from "@testing-library/react";
 import CityPicker, { CityPickerProps } from "../CityPicker";
+import "@testing-library/jest-dom";
 
 const defProps: CityPickerProps = {
   handleCitySubmit: jest.fn,

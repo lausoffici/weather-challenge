@@ -1,6 +1,7 @@
 import React from "react";
 import { screen, render } from "@testing-library/react";
 import Forecast, { ForecastProps } from "../Forecast";
+import "@testing-library/jest-dom";
 
 const defProps: ForecastProps = {
   forecastData: undefined,
