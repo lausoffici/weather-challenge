@@ -1,11 +1,11 @@
-import React from 'react';
-import { ForecastResponse } from '../../types/index';
-import { getDailyForecast } from '../../utils/weather.utils';
-import ForecastContainer from './ForecastContainer';
-import ForecastItem from './ForecastItem';
+import React from "react";
+import { ForecastResponse } from "../../types/index";
+import { getDailyForecast } from "../../utils/weather.utils";
+import ForecastContainer from "./ForecastContainer";
+import ForecastItem from "./ForecastItem";
 
 export type ForecastProps = {
-  forecastData?: ForecastResponse
+  forecastData?: ForecastResponse;
 };
 
 const Forecast: React.FC<ForecastProps> = ({ forecastData }) => {
@@ -14,9 +14,10 @@ const Forecast: React.FC<ForecastProps> = ({ forecastData }) => {
       <ForecastContainer>
         <h1>Daily Forecast 5 days</h1>
         <div className="content">
-          {forecastData && getDailyForecast(forecastData).list.map((item, index) => (
-            <ForecastItem key={index} weatherData={item} />
-          ))}
+          {forecastData &&
+            getDailyForecast(forecastData).list.map((item, index) => (
+              <ForecastItem key={index} weatherData={item} />
+            ))}
         </div>
       </ForecastContainer>
     </div>

@@ -4,8 +4,8 @@ import CityPicker, { CityPickerProps } from "../CityPicker";
 
 const defProps: CityPickerProps = {
   handleCitySubmit: jest.fn,
-  cityName: '',
-  setCityName: jest.fn
+  cityName: "",
+  setCityName: jest.fn,
 };
 
 const component = () => render(<CityPicker {...defProps} />);

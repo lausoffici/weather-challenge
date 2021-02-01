@@ -10,7 +10,7 @@ const ForecastContainer = styled.div`
     display: flex;
     padding: 10px 0;
   }
-  
+
   @media (max-width: 800px) {
     width: 350px;
 

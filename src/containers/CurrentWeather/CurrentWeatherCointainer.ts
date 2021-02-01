@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const CurrentWeatherContainer = styled.div`
   flex: 1;
@@ -6,7 +6,9 @@ const CurrentWeatherContainer = styled.div`
   padding: 20px;
   font-weight: 600;
 
-  .secondary-info, .description, .feels-like {
+  .secondary-info,
+  .description,
+  .feels-like {
     opacity: 0.7;
   }
 

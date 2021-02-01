@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 const CityPickerContainer = styled.div`
   flex: 2;
@@ -40,9 +40,9 @@ const CityPickerContainer = styled.div`
     letter-spacing: 2px;
     font-weight: 600;
     outline: none;
-    transition: .4s;
+    transition: 0.4s;
 
-    &:hover { 
+    &:hover {
       background-color: #6870d2;
     }
   }
