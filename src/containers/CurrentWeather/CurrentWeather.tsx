@@ -29,7 +29,7 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weatherData }) => {
           <div className="secondary-info">
             <img
               className="weather-icon"
-              src={`http://openweathermap.org/img/wn/${weatherData?.weather[0].icon}@2x.png`}
+              src={`https://openweathermap.org/img/wn/${weatherData?.weather[0].icon}@2x.png`}
             />
             <div>Humidity: {weatherData?.main.humidity}%</div>
             <div>Wind: {weatherData?.wind.speed} m/s</div>

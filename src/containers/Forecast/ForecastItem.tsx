@@ -20,7 +20,7 @@ const ForecastItem: React.FC<ForecastItemProps> = ({ weatherData }) => {
       </div>
       <img
         className="weather-icon"
-        src={`http://openweathermap.org/img/wn/${weatherData?.weather[0].icon}@2x.png`}
+        src={`https://openweathermap.org/img/wn/${weatherData?.weather[0].icon}@2x.png`}
       />
       <div className="description">{weatherData.weather[0].main}</div>
       <div className="info">
