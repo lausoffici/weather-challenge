@@ -1,7 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const webpack = require("webpack");
 const path = require("path");
-const dotenv = require("dotenv");
 
 module.exports = () => {
   return {
@@ -13,6 +12,13 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./public/index.html",
+      }),
+      new webpack.EnvironmentPlugin({
+        LOCATION_API_URL: "http://ip-api.com/json",
+        WEATHER_API_URL:
+          "http://api.openweathermap.org/data/2.5/weather?appid=699c25a797f6faeb1f3bf545c2fecdbf&units=metric",
+        FORECAST_API_URL:
+          "http://api.openweathermap.org/data/2.5/forecast?units=metric&appid=699c25a797f6faeb1f3bf545c2fecdbf",
       }),
     ],
     resolve: {
