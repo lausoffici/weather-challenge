@@ -3,9 +3,9 @@ import { WeatherResponse } from "../../types/index";
 import { formatTemperature as format } from "../../utils/weather.utils";
 import CurrentWeatherContainer from "./CurrentWeatherCointainer";
 
-export type CurrentWeatherProps = {
+export interface CurrentWeatherProps {
   weatherData?: WeatherResponse;
-};
+}
 
 const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weatherData }) => {
   return (

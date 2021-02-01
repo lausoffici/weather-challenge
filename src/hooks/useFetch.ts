@@ -1,10 +1,10 @@
 import { useState, useEffect, useCallback } from "react";
 
-type UseFetchResponse<T> = {
+interface UseFetchResponse<T> {
   status: Status;
   data: T | undefined;
   get: GetRequest;
-};
+}
 
 type GetRequest = (endpoint?: string) => Promise<void>;
 

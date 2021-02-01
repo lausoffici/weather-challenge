@@ -1,11 +1,11 @@
 import React, { Dispatch, FC, FormEvent, SetStateAction } from "react";
 import CityPickerContainer from "./CityPickerContainer";
 
-export type CityPickerProps = {
+export interface CityPickerProps {
   handleCitySubmit: (event: FormEvent) => void;
   cityName: string;
   setCityName: Dispatch<SetStateAction<string>>;
-};
+}
 
 const CityPicker: FC<CityPickerProps> = ({
   handleCitySubmit,

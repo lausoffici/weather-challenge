@@ -14,13 +14,11 @@ export interface LocationResponse {
   query: string;
 }
 export interface WeatherResponse {
-  weather: [
-    {
-      main: string;
-      description: string;
-      icon: string;
-    }
-  ];
+  weather: {
+    main: string;
+    description: string;
+    icon: string;
+  }[];
   main: {
     temp: number;
     feels_like: number;

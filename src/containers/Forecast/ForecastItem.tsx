@@ -6,9 +6,9 @@ import {
 } from "../../utils/weather.utils";
 import ForecastItemContainer from "./ForecastItemContainer";
 
-export type ForecastItemProps = {
+export interface ForecastItemProps {
   weatherData: WeatherResponse;
-};
+}
 
 const ForecastItem: React.FC<ForecastItemProps> = ({ weatherData }) => {
   return (
