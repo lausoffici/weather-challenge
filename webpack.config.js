@@ -17,9 +17,9 @@ module.exports = () => {
       new webpack.EnvironmentPlugin({
         LOCATION_API_URL: "https://ipapi.co/json/",
         WEATHER_API_URL:
-          "https://api.openweathermap.org/data/2.5/weather?appid=699c25a797f6faeb1f3bf545c2fecdbf&units=metric",
+          "https://api.openweathermap.org/data/2.5/weather?appid=6ad6e978f38ad3990ed04ecb49e9dd66&units=metric",
         FORECAST_API_URL:
-          "https://api.openweathermap.org/data/2.5/forecast?units=metric&appid=699c25a797f6faeb1f3bf545c2fecdbf",
+          "https://api.openweathermap.org/data/2.5/forecast?units=metric&appid=6ad6e978f38ad3990ed04ecb49e9dd66",
       }),
     ],
     resolve: {
