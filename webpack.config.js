@@ -12,6 +12,7 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./public/index.html",
+        favicon: "./public/favicon.ico",
       }),
       new webpack.EnvironmentPlugin({
         LOCATION_API_URL: "https://ipapi.co/json/",
