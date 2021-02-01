@@ -29,7 +29,7 @@ const Location: React.FC = () => {
   useEffect(() => {
     if (!locationData) return;
 
-    const queryParams = `&lat=${locationData.lat}&lon=${locationData.lon}`;
+    const queryParams = `&lat=${locationData.latitude}&lon=${locationData.longitude}`;
     getCurrentWeatherData(queryParams);
     getForecastData(queryParams);
   }, [locationData, getCurrentWeatherData, getForecastData]);
@@ -45,7 +45,7 @@ const Location: React.FC = () => {
       getCurrentWeatherData(queryParams);
       getForecastData(queryParams);
     } else {
-      const queryParams = `&lat=${locationData?.lat}&lon=${locationData?.lon}`;
+      const queryParams = `&lat=${locationData?.latitude}&lon=${locationData?.longitude}`;
       getCurrentWeatherData(queryParams);
       getForecastData(queryParams);
     }

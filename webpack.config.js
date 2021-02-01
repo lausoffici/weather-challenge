@@ -6,7 +6,7 @@ module.exports = () => {
   return {
     entry: "./src/index.tsx",
     output: {
-      filename: "bundle.[hash].js",
+      filename: "bundle.[fullhash].js",
       path: path.resolve(__dirname, "dist"),
     },
     plugins: [
@@ -14,7 +14,7 @@ module.exports = () => {
         template: "./public/index.html",
       }),
       new webpack.EnvironmentPlugin({
-        LOCATION_API_URL: "http://ip-api.com/json",
+        LOCATION_API_URL: "https://ipapi.co/json/",
         WEATHER_API_URL:
           "https://api.openweathermap.org/data/2.5/weather?appid=699c25a797f6faeb1f3bf545c2fecdbf&units=metric",
         FORECAST_API_URL:
