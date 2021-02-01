@@ -1,10 +1,7 @@
 import React, { FormEvent, useEffect, useState } from "react";
 import { useFetch } from "../../hooks/useFetch";
-import {
-  ForecastResponse,
-  LocationResponse,
-  WeatherResponse,
-} from "../../types/index";
+import { useWeather } from "../../hooks/useWeather";
+import { LocationResponse } from "../../types/index";
 import CityPicker from "../CityPicker/CityPicker";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import Forecast from "../Forecast/Forecast";
@@ -16,14 +13,13 @@ const Location: React.FC = () => {
   const { data: locationData } = useFetch<LocationResponse>(
     process.env.LOCATION_API_URL || ""
   );
+
   const {
-    data: forecastData,
-    get: getForecastData,
-  } = useFetch<ForecastResponse>(process.env.FORECAST_API_URL || "", false);
-  const {
-    data: currentWeatherData,
-    get: getCurrentWeatherData,
-  } = useFetch<WeatherResponse>(process.env.WEATHER_API_URL || "", false);
+    currentWeatherData,
+    getCurrentWeatherData,
+    forecastData,
+    getForecastData,
+  } = useWeather();
 
   // Fetching weather data with client's location at init
   useEffect(() => {

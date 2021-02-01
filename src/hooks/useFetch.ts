@@ -6,7 +6,7 @@ interface UseFetchResponse<T> {
   get: GetRequest;
 }
 
-type GetRequest = (endpoint?: string) => Promise<void>;
+export type GetRequest = (endpoint?: string) => Promise<void>;
 
 export type Status = "idle" | "resolved" | "error" | "pending";
 
