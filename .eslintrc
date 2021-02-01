@@ -4,12 +4,16 @@
     "es2021": true
   },
   "extends": [
-    "eslint:recommended", 
-    "plugin:@typescript-eslint/recommended", 
-    "plugin:react/recommended", 
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:jest-dom/recommended",
-    "plugin:testing-library/recommended"
+    "plugin:testing-library/recommended",
+    "plugin:prettier/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -30,12 +34,13 @@
     }
   },
   "plugins": [
-    "react", 
-    "@typescript-eslint", 
-    "jest-dom", 
-    "testing-library"
+    "react",
+    "@typescript-eslint",
+    "jest-dom",
+    "testing-library",
+    "prettier"
   ],
-  "ignorePatterns": ["dist/*", "node_modules/*", "webpack.config.js", "src/types/*"],
+  "ignorePatterns": ["dist/*", "node_modules/*", "webpack.config.js"],
   "rules": {
     "@typescript-eslint/no-var-requires": "off",
     "react/prop-types": "off"
