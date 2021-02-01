@@ -14,7 +14,7 @@ Weather data is obtained consuming [OpenWeatherMap](https://openweathermap.org/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library)
 - [styled-components](https://styled-components.com/)
 
-## Use
+## Usage
 Enviroment variables can be configurated in webpack.config.js inside *EnviromentPlugin*
 
 ### Production
