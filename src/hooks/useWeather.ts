@@ -2,7 +2,6 @@ import { useCallback, useEffect } from "react";
 import { ForecastResponse, WeatherResponse } from "../types";
 import useFetch from "./useFetch";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 interface UseWeatherResponse {
   currentWeatherData: WeatherResponse | undefined;

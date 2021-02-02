@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import { LocationResponse } from "../types";
 import useFetch from "./useFetch";
 import { toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
 
 const useClientLocation = (): LocationResponse | undefined => {
   const { data: locationData, status } = useFetch<LocationResponse>(
