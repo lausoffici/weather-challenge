@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const LocationContainer = styled.div`
+const HomeContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,4 +19,4 @@ const LocationContainer = styled.div`
   }
 `;
 
-export default LocationContainer;
+export default HomeContainer;

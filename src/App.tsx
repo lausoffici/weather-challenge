@@ -1,11 +1,11 @@
 import React from "react";
-import Location from "./containers/Location/Location";
+import Home from "./containers/Home/Home";
 import { ToastContainer } from "react-toastify";
 
 const App: React.FC = () => (
   <>
     <ToastContainer />
-    <Location />
+    <Home />
   </>
 );
 

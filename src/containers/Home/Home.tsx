@@ -4,9 +4,9 @@ import { useWeather } from "../../hooks/useWeather";
 import CityPicker from "../CityPicker/CityPicker";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import Forecast from "../Forecast/Forecast";
-import LocationContainer from "./LocationContainer";
+import HomeContainer from "./Home";
 
-const Location: React.FC = () => {
+const Home: React.FC = () => {
   const [cityName, setCityName] = useState<string>("");
 
   // Ask for client's location
@@ -40,7 +40,7 @@ const Location: React.FC = () => {
   };
 
   return (
-    <LocationContainer>
+    <HomeContainer>
       <div className="row">
         <CityPicker
           handleCitySubmit={handleCitySubmit}
@@ -52,8 +52,8 @@ const Location: React.FC = () => {
         )}
         {forecastData && <Forecast forecastData={forecastData} />}
       </div>
-    </LocationContainer>
+    </HomeContainer>
   );
 };
 
-export default Location;
+export default Home;
