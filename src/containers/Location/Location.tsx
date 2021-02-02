@@ -1,7 +1,6 @@
-import React, { FormEvent, useEffect, useState } from "react";
-import { useFetch } from "../../hooks/useFetch";
+import React, { FormEvent, useCallback, useEffect, useState } from "react";
+import { useClientLocation } from "../../hooks/useClientLocation";
 import { useWeather } from "../../hooks/useWeather";
-import { LocationResponse } from "../../types/index";
 import CityPicker from "../CityPicker/CityPicker";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import Forecast from "../Forecast/Forecast";
@@ -10,41 +9,34 @@ import LocationContainer from "./LocationContainer";
 const Location: React.FC = () => {
   const [cityName, setCityName] = useState<string>("");
 
-  const { data: locationData } = useFetch<LocationResponse>(
-    process.env.LOCATION_API_URL || ""
-  );
+  // Ask for client's location
+  const locationData = useClientLocation();
 
   const {
     currentWeatherData,
-    getCurrentWeatherData,
     forecastData,
-    getForecastData,
+    fetchCurrentWeatherAndForecastData,
   } = useWeather();
 
-  // Fetching weather data with client's location at init
-  useEffect(() => {
-    if (!locationData) return;
+  // GET current and forecast weather data of a city if provided or client's approx location.
+  const getWeather = useCallback(
+    (cityName?: string) => {
+      if (!locationData && !cityName) return;
+      const queryParams = cityName
+        ? `&q=${cityName}`
+        : `&lat=${locationData?.latitude}&lon=${locationData?.longitude}`;
+      fetchCurrentWeatherAndForecastData(queryParams);
+    },
+    [locationData, fetchCurrentWeatherAndForecastData]
+  );
 
-    const queryParams = `&lat=${locationData.latitude}&lon=${locationData.longitude}`;
-    getCurrentWeatherData(queryParams);
-    getForecastData(queryParams);
-  }, [locationData, getCurrentWeatherData, getForecastData]);
+  // Fetch client's location weather data by default
+  useEffect(() => getWeather(), [locationData, getWeather]);
 
   // Handling CityPicker's submit
   const handleCitySubmit = (event: FormEvent) => {
     event.preventDefault();
-    if (!locationData && !cityName) return;
-
-    // if city is provided tries to fetch city's weather data, if not fetch client's location weather data
-    if (cityName) {
-      const queryParams = `&q=${cityName}`;
-      getCurrentWeatherData(queryParams);
-      getForecastData(queryParams);
-    } else {
-      const queryParams = `&lat=${locationData?.latitude}&lon=${locationData?.longitude}`;
-      getCurrentWeatherData(queryParams);
-      getForecastData(queryParams);
-    }
+    getWeather(cityName);
   };
 
   return (

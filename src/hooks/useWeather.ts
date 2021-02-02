@@ -1,14 +1,13 @@
-import { useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { ForecastResponse, WeatherResponse } from "../types";
-import { GetRequest, useFetch } from "./useFetch";
+import { useFetch } from "./useFetch";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 interface UseWeatherResponse {
   currentWeatherData: WeatherResponse | undefined;
   forecastData: ForecastResponse | undefined;
-  getCurrentWeatherData: GetRequest;
-  getForecastData: GetRequest;
+  fetchCurrentWeatherAndForecastData: (endpoint?: string) => void;
 }
 
 export const useWeather = (): UseWeatherResponse => {
@@ -28,10 +27,17 @@ export const useWeather = (): UseWeatherResponse => {
     }
   }, [status]);
 
+  const fetchCurrentWeatherAndForecastData = useCallback(
+    (endpoint?: string) => {
+      getCurrentWeatherData(endpoint);
+      getForecastData(endpoint);
+    },
+    [getCurrentWeatherData, getForecastData]
+  );
+
   return {
     currentWeatherData,
     forecastData,
-    getCurrentWeatherData,
-    getForecastData,
+    fetchCurrentWeatherAndForecastData,
   };
 };
