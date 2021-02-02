@@ -1,6 +1,6 @@
 import React, { FormEvent, useCallback, useEffect, useState } from "react";
-import { useClientLocation } from "../../hooks/useClientLocation";
-import { useWeather } from "../../hooks/useWeather";
+import useClientLocation from "../../hooks/useClientLocation";
+import useWeather from "../../hooks/useWeather";
 import CityPicker from "../CityPicker/CityPicker";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import Forecast from "../Forecast/Forecast";

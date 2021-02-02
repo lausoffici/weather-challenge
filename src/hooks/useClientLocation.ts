@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { LocationResponse } from "../types";
-import { useFetch } from "./useFetch";
+import useFetch from "./useFetch";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-export const useClientLocation = (): LocationResponse | undefined => {
+const useClientLocation = (): LocationResponse | undefined => {
   const { data: locationData, status } = useFetch<LocationResponse>(
     process.env.LOCATION_API_URL || ""
   );
@@ -17,3 +17,5 @@ export const useClientLocation = (): LocationResponse | undefined => {
 
   return locationData;
 };
+
+export default useClientLocation;
