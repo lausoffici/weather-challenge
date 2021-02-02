@@ -4,7 +4,7 @@ import {
   formatTemperature as format,
   getDayOfWeek,
 } from "../../utils/weather.utils";
-import ForecastItemContainer from "./ForecastItemContainer";
+import ForecastItemStyles from "./ForecastItemStyles";
 
 export interface ForecastItemProps {
   weatherData: WeatherResponse;
@@ -12,7 +12,7 @@ export interface ForecastItemProps {
 
 const ForecastItem: React.FC<ForecastItemProps> = ({ weatherData }) => {
   return (
-    <ForecastItemContainer>
+    <ForecastItemStyles>
       <h2>{getDayOfWeek(weatherData.dt)}</h2>
       <div className="temp">
         {format(weatherData?.main.temp)}
@@ -28,7 +28,7 @@ const ForecastItem: React.FC<ForecastItemProps> = ({ weatherData }) => {
         <div>Humidity: {weatherData?.main.humidity}%</div>
         <div>Wind: {weatherData?.wind.speed} m/s</div>
       </div>
-    </ForecastItemContainer>
+    </ForecastItemStyles>
   );
 };
 

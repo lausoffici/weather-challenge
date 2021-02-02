@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CityPickerContainer = styled.div`
+const CityPickerStyles = styled.div`
   flex: 2;
   min-width: 320px;
   padding: 20px;
@@ -48,4 +48,4 @@ const CityPickerContainer = styled.div`
   }
 `;
 
-export default CityPickerContainer;
+export default CityPickerStyles;

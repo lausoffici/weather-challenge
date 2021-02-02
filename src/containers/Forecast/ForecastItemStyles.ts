@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ForecastItemContainer = styled.div`
+const ForecastItemStyles = styled.div`
   flex: 1;
   font-weight: 600;
 
@@ -44,4 +44,4 @@ const ForecastItemContainer = styled.div`
   }
 `;
 
-export default ForecastItemContainer;
+export default ForecastItemStyles;

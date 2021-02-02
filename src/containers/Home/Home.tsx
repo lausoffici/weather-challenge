@@ -4,7 +4,7 @@ import useWeather from "../../hooks/useWeather";
 import CityPicker from "../CityPicker/CityPicker";
 import CurrentWeather from "../CurrentWeather/CurrentWeather";
 import Forecast from "../Forecast/Forecast";
-import HomeContainer from "./HomeContainer";
+import HomeStyles from "./HomeStyles";
 
 const Home: React.FC = () => {
   const [cityName, setCityName] = useState<string>("");
@@ -40,7 +40,7 @@ const Home: React.FC = () => {
   };
 
   return (
-    <HomeContainer>
+    <HomeStyles>
       <div className="row">
         <CityPicker
           handleCitySubmit={handleCitySubmit}
@@ -52,7 +52,7 @@ const Home: React.FC = () => {
         )}
         {forecastData && <Forecast forecastData={forecastData} />}
       </div>
-    </HomeContainer>
+    </HomeStyles>
   );
 };
 

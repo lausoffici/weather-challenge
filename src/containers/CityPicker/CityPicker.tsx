@@ -1,5 +1,5 @@
 import React, { Dispatch, FC, FormEvent, SetStateAction } from "react";
-import CityPickerContainer from "./CityPickerContainer";
+import CityPickerStyles from "./CityPickerStyles";
 
 export interface CityPickerProps {
   handleCitySubmit: (event: FormEvent) => void;
@@ -13,7 +13,7 @@ const CityPicker: FC<CityPickerProps> = ({
   setCityName,
 }) => (
   <div className="card flex-grow-1">
-    <CityPickerContainer>
+    <CityPickerStyles>
       <form onSubmit={handleCitySubmit} autoComplete="off">
         <h1>Weather in your city</h1>
         <label>
@@ -28,7 +28,7 @@ const CityPicker: FC<CityPickerProps> = ({
         </label>
         <button>Search</button>
       </form>
-    </CityPickerContainer>
+    </CityPickerStyles>
   </div>
 );
 

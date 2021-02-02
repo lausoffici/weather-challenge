@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const CurrentWeatherContainer = styled.div`
+const CurrentWeatherStyles = styled.div`
   flex: 1;
   min-width: 320px;
   padding: 20px;
@@ -33,4 +33,4 @@ const CurrentWeatherContainer = styled.div`
   }
 `;
 
-export default CurrentWeatherContainer;
+export default CurrentWeatherStyles;

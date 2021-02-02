@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ForecastContainer = styled.div`
+const ForecastStyles = styled.div`
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -21,4 +21,4 @@ const ForecastContainer = styled.div`
   }
 `;
 
-export default ForecastContainer;
+export default ForecastStyles;

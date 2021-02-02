@@ -1,7 +1,7 @@
 import React from "react";
 import { WeatherResponse } from "../../types/index";
 import { formatTemperature as format } from "../../utils/weather.utils";
-import CurrentWeatherContainer from "./CurrentWeatherCointainer";
+import CurrentWeatherStyles from "./CurrentWeatherStyles";
 
 export interface CurrentWeatherProps {
   weatherData?: WeatherResponse;
@@ -10,7 +10,7 @@ export interface CurrentWeatherProps {
 const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weatherData }) => {
   return (
     <div className="card">
-      <CurrentWeatherContainer>
+      <CurrentWeatherStyles>
         <h1>Current weather</h1>
         <div className="content">
           <div className="main-info">
@@ -36,7 +36,7 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = ({ weatherData }) => {
             <div>Pressure: {weatherData?.main.pressure} hPa</div>
           </div>
         </div>
-      </CurrentWeatherContainer>
+      </CurrentWeatherStyles>
     </div>
   );
 };
