@@ -14,6 +14,8 @@ Weather data is obtained consuming [OpenWeatherMap](https://openweathermap.org/)
 - [React Testing Library](https://testing-library.com/docs/react-testing-library)
 - [styled-components](https://styled-components.com/)
 
+Created from scratch.
+
 ## Usage
 Enviroment variables can be configurated in webpack.config.js inside *EnviromentPlugin*
 
@@ -29,22 +31,22 @@ Install project dependencies
 > npm install
 ```
 
-Starts `webpack-dev-server`
+Start `webpack-dev-server`
 ```
 > npm start
 ```
 
-Shows errors/warnings detected by ESLint
+Show errors/warnings detected by ESLint
 ```
 > npm run lint
 ```
 
-Shows errors/warnings detected by ESLint and tries to fix them
+Show errors/warnings detected by ESLint and tries to fix them
 ```
 > npm run lint:fix
 ```
 
-Runs tests
+Run tests
 ```
 > npm run test
 ```
