@@ -6,7 +6,7 @@ const CurrentWeatherStyles = styled.div`
   padding: 20px;
   font-weight: 600;
 
-  .secondary-info,
+  .secondary-info > div,
   .description,
   .feels-like {
     opacity: 0.7;
