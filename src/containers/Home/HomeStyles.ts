@@ -17,6 +17,18 @@ const HomeStyles = styled.div`
       align-items: center;
     }
   }
+
+  .footer {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-family: "Lato", sans-serif;
+
+    @media (max-width: 1040px) {
+      display: none;
+    }
+  }
 `;
 
 export default HomeStyles;

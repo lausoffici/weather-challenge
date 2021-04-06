@@ -52,6 +52,16 @@ const Home: React.FC = () => {
         )}
         {forecastData && <Forecast forecastData={forecastData} />}
       </div>
+      <div className="footer">
+        Designed by&nbsp;
+        <a
+          href="https://github.com/lausoffici"
+          rel="noreferrer"
+          target="_blank"
+        >
+          me
+        </a>
+      </div>
     </HomeStyles>
   );
 };
